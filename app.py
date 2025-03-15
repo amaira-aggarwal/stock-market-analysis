@@ -21,13 +21,12 @@ def predict_datapoint():
         return render_template('home.html')
     else:
         data=CustomData(
-            area=float(request.form.get('area')),
-            bhk=request.form.get('bhk'),
-            type=request.form.get('type'),
-            status=request.form.get('status'),
-            parking=request.form.get('parking'),
-            furnishing=request.form.get('furnishing'),
-            transaction=request.form.get('transaction')
+            open=float(request.form.get('open')),
+            high=request.form.get('high'),
+            low=request.form.get('low'),
+            close=request.form.get('close'),
+            adjclose=request.form.get('adjclose'),
+            companyName=request.form.get('companyName')
 
         )
         pred_df=data.get_data_as_data_frame()

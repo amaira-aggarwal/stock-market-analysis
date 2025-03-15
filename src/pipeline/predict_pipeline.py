@@ -28,36 +28,35 @@ class PredictPipeline:
 
 class CustomData:
     def __init__(  self,
-        area: int,
-        bhk: str,
-        furnishing:str,
-        parking: int,
-        status: str,
-        transaction: str,
-        type: str
+        open: int,
+        high: int,
+        low:int,
+        close: int,
+        adjclose: int,
+        companyName: str
         
         ):
-        self.area = area
-        self.bhk = bhk
-        self.furnishing = furnishing
-        self.parking = parking
-        self.status = status
-        self.transaction = transaction
-        self.type = type
+        self.open = open
+        self.high = high
+        self.low = low
+        self.close = close
+        self.adjclose = adjclose
+        self.companyName = companyName
+        
  
 
     def get_data_as_data_frame(self):
         try:
             custom_data_input_dict = {
                 
-                "Area": [self.area],
-                "BHK": [self.bhk],
-                "Furnishing": [self.furnishing],
-                "Parking": [self.parking],
+                "Open": [self.open],
+                "High": [self.high],
+                "Low": [self.low],
+                "Close": [self.close],
                 
-                "Status": [self.status],
-                "Transaction": [self.transaction],
-                "Type": [self.type],
+                "Adj Close": [self.adjclose],
+                "Company Name": [self.companyName],
+              
             }
 
             return pd.DataFrame(custom_data_input_dict)

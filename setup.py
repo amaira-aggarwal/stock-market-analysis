@@ -17,7 +17,7 @@ def get_requirements(file_path:str)->List[str]:
     return requirements
 
 setup(
-name='House-Price-Prediction',
+name='Stock-market',
 version='0.0.1',
 author='Amaira',
 author_email='amairaaggarwal9104@gmail.com',
